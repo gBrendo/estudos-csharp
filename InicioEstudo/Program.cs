@@ -340,6 +340,8 @@ class Program
 
         // 5 * Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o código
 
+        /*
+
         Console.WriteLine("Entre com o código, número de peças e valor unitário da peça 1 (mesma linha)");
         string[] vet1 = Console.ReadLine().Split(' ');
         int codPeca1 = int.Parse(vet1[0]);
@@ -354,6 +356,64 @@ class Program
         double valTotal = valorPeca1 + valorPeca2;
 
         Console.WriteLine("VALOR A PAGAR: " + valTotal.ToString("F2", CultureInfo.InvariantCulture));
+
+        */
+        //**************************************************************************
+
+        //Exercício 06 * Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e
+        /*mostre:
+        a) a área do triângulo retângulo que tem A por base e C por altura.
+        b) a área do círculo de raio C. (pi = 3.14159)
+        c) a área do trapézio que tem A e B por bases e C por altura.
+        d) a área do quadrado que tem lado B.
+        e) a área do retângulo que tem lados A e B.*/
+
+        /*  double A, B, C, triangulo, circulo,trapezio,quadrado, retangulo;
+
+          string[] vet = Console.ReadLine().Split(' ');
+          A = double.Parse(vet[0], CultureInfo.InvariantCulture);
+          B = double.Parse(vet[1], CultureInfo.InvariantCulture);
+          C = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+          triangulo = A * C / 2.0;
+          circulo = 3.14159 * C * C;
+          trapezio = (A + B) * C / 2.0;
+          quadrado = B * B;
+          retangulo = A * B;
+
+          Console.WriteLine("TRIANGULO; "+ triangulo.ToString("F3", CultureInfo.InvariantCulture));
+          Console.WriteLine("CIRCULO: "+ circulo.ToString("F3", CultureInfo.InvariantCulture));
+          Console.WriteLine("TRAPEZIO: "+ trapezio.ToString("F3", CultureInfo.InvariantCulture));
+          Console.WriteLine("QUADRADO: "+ quadrado.ToString("F3", CultureInfo.InvariantCulture));
+          Console.WriteLine("RETANGULO: "+ retangulo.ToString("F3", CultureInfo.InvariantCulture));
+
+          Console.WriteLine("Conclusao By Brendo");*/
+
+        /********************************************************************************************/
+
+
+        // OPERADORES COMPARATIVOS
+
+        int a = 10;
+        bool c1= a < 10;
+        bool c2= a < 20;
+        bool c3= a > 10;
+        bool c4 = a > 5;
+        bool c5 = a <= 10;
+        bool c6 = a >= 10;
+        bool c7 = a == 10;
+        bool c8 = a != 10;
+
+
+        Console.WriteLine(c1);
+        Console.WriteLine(c2);
+        Console.WriteLine(c3);
+        Console.WriteLine(c4);
+        Console.WriteLine("----------------------------");
+        Console.WriteLine(c5);
+        Console.WriteLine(c6);
+        Console.WriteLine(c7);
+        
     }
 }
 

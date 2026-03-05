@@ -12,3 +12,4 @@ C:\Users\PC_Admin\Documents\ProjetosEstudos2026\InicioEstudo\InicioEstudo\obj\De
 C:\Users\PC_Admin\Documents\ProjetosEstudos2026\InicioEstudo\InicioEstudo\obj\Debug\net10.0\InicioEstudo.pdb
 C:\Users\PC_Admin\Documents\ProjetosEstudos2026\InicioEstudo\InicioEstudo\obj\Debug\net10.0\InicioEstudo.genruntimeconfig.cache
 C:\Users\PC_Admin\Documents\ProjetosEstudos2026\InicioEstudo\InicioEstudo\obj\Debug\net10.0\ref\InicioEstudo.dll
+C:\Users\PC_Admin\Documents\ProjetosEstudos2026\InicioEstudo\InicioEstudo\obj\Debug\net10.0\InicioEstudo.sourcelink.json
