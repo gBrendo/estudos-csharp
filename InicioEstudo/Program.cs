@@ -1,7 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Drawing;
 using System.Globalization;
+using System.Runtime.Intrinsics.Arm;
+using System.Runtime.Intrinsics.X86;
 using System.Runtime.Serialization;
+using static System.Net.Mime.MediaTypeNames;
 
 /*
 
@@ -394,6 +398,8 @@ class Program
 
         // OPERADORES COMPARATIVOS
 
+        /*
+
         int a = 10;
         bool c1= a < 10;
         bool c2= a < 20;
@@ -413,7 +419,208 @@ class Program
         Console.WriteLine(c5);
         Console.WriteLine(c6);
         Console.WriteLine(c7);
+
+        */
+
+        /********************************************************************************************************************/
+
+        //ESTRUTURA CONDICIONAL(IF-ELSE)
+
+        // estrutura simples
+        /*int x = 10;
+
+        Console.WriteLine("Bom dia");
+
+        if (x > 5)
+        {
+            Console.WriteLine("Boa tarde");
+        }
+
+        Console.WriteLine("Boa noite");
+        */
+
+        // estrutura composta
+        /* Console.WriteLine("Entre com um numero inteiro");
+         int x = int.Parse(Console.ReadLine());
+
+         if (x % 2 == 0)
+         {
+             Console.WriteLine("Par");
+         }
+         else
+         {
+             Console.WriteLine("Impar");
+         }
+
+         */
+
+        // estrutura encadeada(encadeamento de if-else, else if)
+
+        /*
+
+        Console.WriteLine("Qual horario atual");
+        int hora = int.Parse(Console.ReadLine());
+
+        if (hora < 12)
+        {
+            Console.WriteLine("Bom dia");
+        }
+        else if (hora < 18)
+        {
+            Console.WriteLine("Boa tarde");
+        }
+        else
+        {
+            Console.WriteLine("Boa noite");
+
+
+        }
+        */
+
+        // ESCOPO DE INICIALIZAÇÃO DE VARIÁVEIS
+
+        /* quando se declara uma variavel dentro do if, ou entre parenteses ela so existe ali dentro. Nao pode ser usada em outros lugares, ou escopos. Nao se pode 
+        tentar usar uma variavel de um escopo menor em um escopo maior, pois não ira enchergar.*/
+
+
+        // EXERCICIO PROPOSTOS DE FIXAÇÃO - ESTRUTURA CONDICIONAL
+
+        //01 * Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
+
+        /*
+        int num = int.Parse(Console.ReadLine());
+
+        if (num > 0)
+        {
+            Console.WriteLine("POSITIVO");
+        }
+        if (num < 0) { Console.WriteLine("NEGATIVO"); }
+
+        Console.WriteLine("FIM DO PROGRAMA");
+
+        */
+
+        //02 * Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.
+
+        /*
+
+
+        int num = int.Parse(Console.ReadLine());
+
+        if (num % 2 == 0) { Console.WriteLine("PAR"); }
+        else { Console.WriteLine("IMPAR"); }
+
+        Console.WriteLine("FIM DO PROGRAMA");
+
+        */
+
+        //03 * Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou "Nao sao
+        //Multiplos", indicando se os valores lidos são múltiplos entre si. Atenção: os números devem poder ser digitados em
+        //ordem crescente ou decrescente.
+
+        /*
+
+        int a, b;
+
+        string[] vet = Console.ReadLine().Split(' ');
+        a = int.Parse(vet[0]);
+        b = int.Parse(vet[1]);
+
+        if(a % b == 0 || b % a == 0)
+        {
+            Console.WriteLine("SAO MULTIPLOS");
+        }
+        else
+        {
+            Console.WriteLine("NAO SAO MULTIPLOS");
+        }
+
+        Console.WriteLine("FIM DESSA COISA CHATA");
+        */
+
+        //04 * Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode
+        //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
+
+        /*
+        int hrinicial,hrfinal,duracao;
+
+        string[] vet = Console.ReadLine().Split(' ');
+        hrinicial = int.Parse(vet[0]);
+        hrfinal = int.Parse(vet[1]);
+        duracao = 0;
+
+        if(hrfinal > hrinicial)
+        {
+            duracao = hrfinal - hrinicial;
+            Console.WriteLine("O JOGO DUROU " + duracao + " HORA(S)");  
+        }
+        else { 
+        duracao = 24 - hrinicial + hrfinal;
+            Console.WriteLine("O JOGO DUROU " + duracao + " HORA(S)");
+        }
+        */
+
+        //05 ** Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A
+        //seguir, calcule e mostre o valor da conta a pagar
+        /*
+
+        string[] vet = Console.ReadLine().Split(' ');
+        int item = int.Parse(vet[0]);
+        int quantidade = int.Parse(vet[1]);
+        double total = 0.0;
+
+        if (item == 1)
+        {
+            total = quantidade * 4.00;
+
+        }
+        else if (item == 2)
+        {
+            total = quantidade * 4.50;
+        }
+        else if (item == 3)
+        {
+            total = quantidade * 5.00;
+        }
+        else if (item == 4)
+        {
+            total = quantidade * 2.00;
+        }
+        else if (item == 5)
+        {
+            total = quantidade * 1.50;
+        }
+        else {Console.WriteLine("ITEM INEXISTENTE"); }
+
+        Console.WriteLine("Total: R$" + total.ToString("F2", CultureInfo.InvariantCulture));
+        */
+
+        //06
+
         
+
+        double num = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if (num >= 0 && num <= 25)
+        {
+            Console.WriteLine("Intervalo: [0,25]");
+        }
+        else if (num > 25 && num <= 50)
+        {
+            Console.WriteLine("Intervalo: (25,50]");
+        }
+        else if (num > 50 && num <= 75)
+        {
+            Console.WriteLine("Intervalo: (50,75]");
+        }
+        else if (num > 75 && num <= 100)
+        {
+            Console.WriteLine("Intervalo: (75,100]");
+        }
+        else
+        {
+            Console.WriteLine("Fora de intervalo");
+        }
     }
 }
 
