@@ -628,7 +628,9 @@ namespace InicioEstudo
             */
 
 
-            // AULA SOBRE FUNÇOES
+            // AULA SOBRE FUNÇOES // DEBUG
+
+            /*
 
             Console.WriteLine("Digite tres numeros: ");
             int n1 = int.Parse(Console.ReadLine());
@@ -639,10 +641,7 @@ namespace InicioEstudo
 
             Console.WriteLine("Maior = " + resultado);
 
-
-        }
-
-        static int Maior(int a, int b, int c)
+            /* static int Maior(int a, int b, int c)
         {
             int m;
             if(a > b && a > c)
@@ -659,6 +658,145 @@ namespace InicioEstudo
             }
             return m;
         }
+       */
+
+            // ESTRURURA DE REPETIÇÃO - WHILE "ENQUANTO" - nesse caso o programa sempre irá testar a logica pelo que esta dentro dos parenteses do while.
+
+            /*
+            Console.Write("Digite um numero: ");
+            double x = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+
+            while (x >= 0.0)
+            {
+                double raiz = Math.Sqrt(x);
+                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+                Console.WriteLine("Digite outro numero: ");
+                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+
+            Console.WriteLine("Numero negativo!");
+            */
+
+            /*****************************************************************/
+
+            // EXERCICIO DE FIXAÇÃO - ESTRUTURA DE REPETIÇÃO - WHILE
+
+            /* -01 - Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha
+             incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser
+             mpressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+
+            int senha = int.Parse(Console.ReadLine());
+
+            while( senha != 2002)
+            {
+                Console.WriteLine("Senha Invalida");
+                senha = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Acesso Permitido");
+            */
+
+            // - 02 /* Escreva um programa para ler as coordenadas (X,Y) de uma quantidade indeterminada de pontos no sistema
+            /*cartesiano.Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo
+            menos uma de duas coordenadas for NULA(nesta situação sem escrever mensagem alguma).
+
+
+           string[] vet = Console.ReadLine().Split(' ');
+           int x = int.Parse(vet[0]);
+           int y = int.Parse(vet[1]);
+
+
+           while (x != 0 && y != 0)
+           {
+               if (x > 0 && y > 0)
+               {
+                   Console.WriteLine("Primeiro");
+
+               }
+               else if (x < 0 && y > 0)
+               {
+                   Console.WriteLine("Segundo");
+               }
+               else if (x < 0 && y < 0)
+               {
+                   Console.WriteLine("Terceiro");
+
+               }
+               else
+               {
+                   Console.WriteLine("Quarto");
+
+               }
+
+              vet = Console.ReadLine().Split(' ');
+               x = int.Parse(vet[0]);
+               y = int.Parse(vet[1]);
+           }
+            */
+
+            /****************************************************************/
+
+            //03 
+
+            /* Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. Escreva
+um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel
+4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser solicitado um novo código (até
+que seja válido). O programa será encerrado quando o código informado for o número 4. Deve ser escrito a
+mensagem: "MUITO OBRIGADO" e a quantidade de clientes que abasteceram cada tipo de combustível, conforme
+exemplo.
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            int cod = int.Parse(Console.ReadLine());
+            
+            while(cod != 4 )
+            {
+                if (cod == 1)
+                {
+                    alcool = alcool + 1;
+                }
+                else if (cod == 2)
+                {
+                    gasolina = gasolina + 1;
+                }
+                else if(cod == 3)
+                {
+                    diesel = diesel + 1;
+                }
+
+                cod = int.Parse(Console.ReadLine()) ;
+            }
+
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: "+ alcool);
+            Console.WriteLine("Gasolina: "+ gasolina);
+            Console.WriteLine("Diesel: "+ diesel);
+
+        
+            */
+
+            // ESTRUTURA REPETITIVA - FOR (PARA) // for(inicio;condicao;incremento){ comandos...}
+            /* É mais utilizada quando vc ja conhece a quantidade de repetições ou contagem. */
+
+
+            Console.Write("Quantos numeros voce vai digitar? ");
+            int N = int.Parse(Console.ReadLine());
+
+            int soma = 0;
+
+            for (int i = 1; i <= N; i++)
+            {
+                Console.Write("Valor #{0}: ",i);
+                int valor = int.Parse(Console.ReadLine());
+                soma = soma + valor;
+            }
+
+            Console.WriteLine("Soma = " + soma);
+
+
+
+        }
+
     }
 }
 
