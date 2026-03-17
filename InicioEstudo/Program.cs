@@ -778,7 +778,7 @@ exemplo.
             // ESTRUTURA REPETITIVA - FOR (PARA) // for(inicio;condicao;incremento){ comandos...}
             /* É mais utilizada quando vc ja conhece a quantidade de repetições ou contagem. */
 
-
+            /*
             Console.Write("Quantos numeros voce vai digitar? ");
             int N = int.Parse(Console.ReadLine());
 
@@ -792,7 +792,47 @@ exemplo.
             }
 
             Console.WriteLine("Soma = " + soma);
+            */
 
+            // EXERCICIOS DE FIXAÇÃO - ESTRUTURA DE REPETIÇÃO - FOR
+
+
+            //01 - fazer um programa que vc coloca um valor X  e mostre os impares ate chegar no X.
+            /*
+            int num = int.Parse(Console.ReadLine());
+
+
+            for (int i = 1; i <= num; i++)
+            {
+                if(i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            */
+
+            int N = int.Parse(Console.ReadLine());
+            int dentro = 0;
+            int fora = 0;
+
+            for (int i = 0; i < N; i++)
+            {
+                int valor = int.Parse(Console.ReadLine());
+                if (valor >= 10 || valor > 20)
+                {
+                    
+                   fora++;
+
+                }
+                else
+                {
+                    
+                    dentro++;
+                }
+
+                Console.WriteLine(dentro + " in");
+                Console.WriteLine(fora + " out");
+            }
 
 
         }
