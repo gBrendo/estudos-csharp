@@ -810,7 +810,8 @@ exemplo.
                 }
             }
             */
-
+            //02
+            /*
             int N = int.Parse(Console.ReadLine());
             int dentro = 0;
             int fora = 0;
@@ -833,9 +834,27 @@ exemplo.
                 Console.WriteLine(dentro + " in");
                 Console.WriteLine(fora + " out");
             }
+            */
 
+            //03
 
+            int N = int.Parse(Console.ReadLine());
+
+            for(int i = 0; i < N; i++)
+            {
+                string [] vet = Console.ReadLine().Split(' '); 
+                double v1 = double.Parse(vet[0], CultureInfo.InvariantCulture); 
+                double v2 = double.Parse(vet[1], CultureInfo.InvariantCulture); 
+                double v3 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+                double media = (v1 * 2 + v2 * 3 + v3 * 5) / 10;
+
+                Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+            }
         }
+
+
+        
 
     }
 }
