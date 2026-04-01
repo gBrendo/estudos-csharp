@@ -837,6 +837,7 @@ exemplo.
             */
 
             //03
+            /*
 
             int N = int.Parse(Console.ReadLine());
 
@@ -851,6 +852,46 @@ exemplo.
 
                 Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
             }
+            */
+            // exercicio resolvido
+            /*
+            int N = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <=10; i++)
+            {
+                int resultado = i * N;
+
+                Console.WriteLine(i + " x " + N + " = " + resultado);
+            }
+            */
+
+            int x, y, min, max, soma;
+
+            x = int.Parse(Console.ReadLine()); 
+            y = int.Parse(Console.ReadLine());
+
+            if(x<y)
+            {
+                min = x;
+                max = y;
+            }
+            else
+            {
+                min = y;
+                max = x;
+            }
+            soma = 0;
+            for (int i = min + 1; i < max; i++)
+            {
+                
+                if (i % 2 != 0)
+                {
+                    soma = soma + i;
+                }
+            }
+            Console.WriteLine(soma);
+
+
         }
 
 
