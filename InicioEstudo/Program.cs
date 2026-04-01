@@ -864,7 +864,8 @@ exemplo.
                 Console.WriteLine(i + " x " + N + " = " + resultado);
             }
             */
-
+            // mais exercicios de fixação - for
+            /*
             int x, y, min, max, soma;
 
             x = int.Parse(Console.ReadLine()); 
@@ -891,8 +892,12 @@ exemplo.
             }
             Console.WriteLine(soma);
 
+            */
+
 
         }
+            
+
 
 
         
